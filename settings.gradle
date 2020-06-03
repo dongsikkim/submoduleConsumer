@@ -1,2 +1,4 @@
+include ':common'
 include ':app'
+project(':common').projectDir = new File(rootDir, 'submoduleTest/common/')
 rootProject.name = "userProejctAlpha"

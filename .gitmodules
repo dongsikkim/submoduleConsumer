@@ -1,0 +1,3 @@
+[submodule "submoduleTest"]
+	path = submoduleTest
+	url = https://github.ncsoft.com/kimdongsik/submoduleTest.git
