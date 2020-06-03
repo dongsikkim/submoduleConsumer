@@ -7,7 +7,7 @@ import com.airbnb.lottie.LottieAnimationView
 import corp.ncsoft.ncapps.common.ui.loadDefaultLottie
 
 class MainActivity : AppCompatActivity() {
-    lateinit var lottieAnimView: LottieAnimationView
+    private lateinit var lottieAnimView: LottieAnimationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
