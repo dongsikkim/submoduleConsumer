@@ -24,3 +24,22 @@ kimdongikuiiMac:testProject kimdongsik$
 ```
 이제 common을 내 프로젝트 밑으로 가져왔습니다.  
 하지만 아직 common과 app모듈을 연결하지 않아 common모듈에 안에 있는 클래스를 사용하진 못합니다.  
+### 2) 내 프로젝트에 module로 Import
+> Android Studio menu의 File > New > Import Module > Finder로 내 프로젝트 밑의 common모듈 path 입력 > import 체크 > Finish
+
+이제 common을 내 프로젝트의 하나로 모듈로 추가했습니다.
+
+
+### 3) 내 프로젝트에 module Dependency로 추가
+> Android Studio menu의 file > project Structure > Dependencies > app모듈 선택 > Declared Dependencies탭의 '+'선택 > Module Dependency선택 > common 모듈 선택 > Ok > Apply > Ok
+
+### 4) common의 Lottie 클래스 가져오는것 확인하기
+<img src="./submodule.gif" width="70%">
+내 프로젝트의 :app모듈에 MainActivity에서 LottieAnim을 치면 자동완성되는것을 확인할 수 있습니다.
+내 프로젝트 app Module에는 Lottie Dependency가 없지만, common의 dependepcy가 share되어 접근 가능한것을 볼수 있습니다.
+
+### #추가
+submodule(:common)이 업데이트 되었을때는아래의 명령어를 치면 새로운 버전을 땡겨올수 있습니다.
+```git
+git submodule update --remote
+```
